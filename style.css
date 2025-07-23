@@ -1,6 +1,6 @@
 
 body {
-  background: #f6f8ff;
+  background: #f6f8ffd0;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -15,6 +15,7 @@ body {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 
 .nav-content {
@@ -65,7 +66,7 @@ body {
   width: 1140px;
   margin: 0 auto;
   padding: 40px 0;
-  margin-top: 221px;
+  margin-top: 120px;
 }
 
 .banner-content {
@@ -105,6 +106,86 @@ letter-spacing: 0%;
   display: block;
   
 }
+
+.plants-section {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 60px 0;
+  text-align: center;
+}
+
+
+.plants-header h2 {
+ font-family: Noto Serif;
+font-weight: 750px;
+font-size: 55px;
+line-height: 68px;
+letter-spacing: 0%;
+text-align: center;
+width: 1140px;
+height: 68px;
+margin-bottom: 0;
+}
+
+.plants-header .highlight {
+  color: #f26a21;
+}
+
+
+.plants-header p {
+  color: rgba(0, 0, 0, 0.5);
+font-family: Inter;
+font-size: 22px;
+font-weight: 400;
+line-height: 27px;
+letter-spacing: 0%;
+width: 888px;
+height: 54px;
+text-align: center;
+margin: 0 auto;
+margin-bottom: 49px;
+
+
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.plant-card {
+  padding: 10px;
+  text-align: center;
+}
+
+.plant-card img {
+  width: 270px;
+ height: 322.94px;
+}
+
+.plant-card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 16px;
+  color: #111;
+}
+
+.plant-card .price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plant-card button {
+  background-color: #f26a21;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
 
 
 /* ✅ Responsive for screens smaller than 768px */
@@ -166,5 +247,17 @@ letter-spacing: 0%;
   .banner-image img {
     width: 100%;
     height: auto;
+  }
+}
+/* ✅ Responsive for Mobile */
+@media screen and (max-width: 768px) {
+  .plants-section {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .plant-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
