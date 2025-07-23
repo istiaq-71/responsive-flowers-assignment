@@ -1,0 +1,84 @@
+.navbar {
+  width: 1140px;
+  height: 71px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-spacer {
+  flex: 1;
+}
+
+.nav-menu {
+  width: 415px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 48px;
+  padding: 0;
+  position: static;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+
+
+
+/* ✅ Responsive for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    padding: 0 16px;
+    height: auto;
+  }
+
+  .nav-content {
+    flex-wrap: nowrap;
+  }
+
+  .nav-menu {
+    width: auto;
+    height: auto;
+    gap: 8px;
+  }
+
+  .nav-menu a {
+    display: none;
+  }
+
+  .nav-spacer {
+    flex: 1;
+  }
+
+  .cart span {
+    display: inline;
+  }
+}
