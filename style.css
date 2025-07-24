@@ -480,65 +480,49 @@ line-height: 68px;
   }
 }
 
-/* Default style (desktop/tablet) — Optional */
-.plant-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4-column by default (optional) */
-  gap: 20px;
-  padding: 20px;
-}
+
 
 /* 576px screen বা তার কমে — 2-column layout */
 @media (max-width: 576px) {
   .plant-grid {
     grid-template-columns: repeat(2, 1fr); /* 2-column grid */
-    gap: 15px; /* slightly tighter spacing if needed */
+    gap: 0; /* slightly tighter spacing if needed */
     padding: 10px;
+    margin: 0 300px;
   }
 }
 
-/* plants-lover-section.css */
-@media screen and (max-width: 768px) {
-  .plants-lover-section {
-    width: 100%;
-    padding: 40px 20px;
-  }
-
+@media (max-width: 576px) {
   .plants-lover-content {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    margin: 0 300px;
+  }
+  .trusted-badge{
+    display: none;
   }
 
   .lover-image {
-    width: 100%;
-    height: auto;
-  }
-
-  .lover-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  .trusted-badge {
-    display: none;
+    order: -1; /* Move image to the top */
+    text-align: center; /* Optional: center image */
   }
 
   .lover-text {
     text-align: left;
-    width: 100%;
-    margin-top: 20px;
+    
   }
 
-  .lover-text h2 {
-    font-size: 28px;
+  .lover-text ul {
+    padding-left: 20px;
   }
 }
 
 /* latest-deals-section.css */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .latest-deals-section {
     width: 100%;
-    padding: 40px 20px;
+    padding: 620px 300px;
+    padding-bottom: 0%;
   }
 
   .deals-header h2 {
@@ -577,10 +561,12 @@ line-height: 68px;
 }
 
 /* join-section.css */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .join-section {
     width: 100%;
     padding: 40px 20px;
+    margin: 0 300px;
+    margin-top: 20px;
   }
 
   .join-content h2 {
@@ -588,8 +574,8 @@ line-height: 68px;
   }
 
   .join-form {
-    flex-direction: column;
-    gap: 15px;
+    display: flex;
+    gap: 0;
   }
 
   .join-form input {
@@ -598,31 +584,38 @@ line-height: 68px;
   }
 
   .join-form button {
-    width: 100%;
+    width: 40%;
     padding: 10px;
   }
+  
 }
 
 /* footer-section.css */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .footer-section {
     width: 100%;
     padding: 20px;
+    margin: 0 300px;
+    display: flex;
+  flex-direction: column; /* vertically stack items */
+  align-items: flex-start;
   }
 
   .footer-content {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .footer-logo {
     margin-bottom: 20px;
+    
   }
 
   .footer-links {
     flex-direction: column;
     gap: 20px;
+    align-items: flex-start;
   }
 
   .footer-column {
