@@ -158,17 +158,6 @@ margin-bottom: 49px;
   padding: 10px;
   text-align: center;
 }
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const addToCartButtons = document.querySelectorAll(".plants-section .plant-card button");
-
-    addToCartButtons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        alert("Flower Added to Cart");
-      });
-    });
-  });
-</script>
 
 
 .plant-card img {
@@ -383,7 +372,7 @@ line-height: 68px;
 .join-form {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 0;
 }
 
 .join-form input {
