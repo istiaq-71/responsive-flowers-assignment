@@ -151,7 +151,7 @@ margin-bottom: 49px;
 .plant-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  
 }
 
 .plant-card {
@@ -339,6 +339,52 @@ line-height: 68px;
   display: none; /* Removed button below since it's now in overlay */
 }
 
+.join-section {
+  width: 1440px;
+  height: 533px;
+  margin: 0 auto;
+  padding: 60px 0;
+  background: url('assets/news-letter-bg.png') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.join-content h2 {
+  font-family: Noto Serif;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 68px;
+  letter-spacing: 0%;
+  margin-bottom: 20px;
+  margin-top: 193px;
+}
+
+.join-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.join-form input {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  width: 644px;
+  height: 50px;
+}
+
+.join-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f26a21;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 
 
@@ -494,5 +540,29 @@ line-height: 68px;
 
   .deal-overlay {
     font-size: 18px;
+  }
+}
+/* ✅ Responsive for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .join-section {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .join-content h2 {
+    font-size: 28px;
+  }
+
+  .join-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .join-form input {
+    width: 100%;
+  }
+
+  .join-form button {
+    width: 100%;
   }
 }
