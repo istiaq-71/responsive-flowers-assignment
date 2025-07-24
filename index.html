@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive-flowers</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".plant-card button");
+    
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        alert("Flower Added to Cart");
+      });
+    });
+  });
+</script>
 </head>
 <body>
     <nav class="navbar">
