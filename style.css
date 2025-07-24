@@ -440,74 +440,60 @@ line-height: 68px;
 
 
 /* style.css (for navbar, banner, plants-section) */
-@media screen and (max-width: 768px) {
-  .navbar {
-    width: 100%;
-    padding: 0 16px;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-  .nav-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo img {
-    margin-bottom: 10px;
-  }
-
+@media (max-width: 576px) {
   .nav-menu {
-    display: none; /* Matches image with no menu visible */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    margin: 0 300px;
+  }
+  .logo{
+    margin-left: 300px;
   }
 
-  .cart {
-    margin-top: 10px;
+  .nav-menu a {
+    display: none !important; /* Forcefully hide links */
   }
 
-  .banner {
-    width: 100%;
-    padding: 20px;
-    margin-top: 40px; /* Adjusted to match image spacing */
-  }
-
-  .banner-content {
-    flex-direction: column;
+  .nav-menu .cart {
+    margin-left: auto;
+    display: flex;
     align-items: center;
   }
+}
 
-  .banner-text h1 {
-    font-size: 28px;
-    line-height: 1.4;
-    text-align: center;
+  @media (max-width: 576px) {
+  .banner-content {
+    display: flex;
+    flex-direction: column; 
   }
 
-  .banner-text p {
-    text-align: center;
+  .banner-image {
+    order: -1; /* Move image to the top */
+    text-align: center; /* Optional: center the image */
   }
 
-  .banner-image img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px; /* Space before text */
+  .banner-text {
+    text-align: left; /* Ensure left alignment */
+    padding: 10px 300px; /* Add some spacing if needed */
   }
+}
 
-  .plants-section {
-    width: 100%;
-    padding: 40px 20px;
-  }
+/* Default style (desktop/tablet) — Optional */
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4-column by default (optional) */
+  gap: 20px;
+  padding: 20px;
+}
 
+/* 576px screen বা তার কমে — 2-column layout */
+@media (max-width: 576px) {
   .plant-grid {
-    grid-template-columns: 1fr 1fr; /* Matches 2-column layout in image */
-    gap: 15px; /* Adjusted for visual spacing */
-  }
-
-  .plant-card img {
-    width: 100%;
-    height: auto;
+    grid-template-columns: repeat(2, 1fr); /* 2-column grid */
+    gap: 15px; /* slightly tighter spacing if needed */
+    padding: 10px;
   }
 }
 
